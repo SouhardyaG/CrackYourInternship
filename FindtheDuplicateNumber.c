@@ -11,6 +11,8 @@ int findDuplicate(int* nums, int numsSize){
     }
     return -1;
 }
+// 58 / 58 test cases passed.
+// Status: Accepted
 // Runtime: 128 ms
 // Memory Usage: 11.9 MB
 
@@ -27,5 +29,7 @@ int findDuplicate(int* nums, int numsSize){
     }
     return 0;
 }
+// 58 / 58 test cases passed.
+// Status: Accepted
 // Runtime: 84 ms
 // Memory Usage: 14.4 MB

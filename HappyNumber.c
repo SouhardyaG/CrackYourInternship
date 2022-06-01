@@ -1,3 +1,5 @@
+// Solution 1:
+
 bool isHappy(int n){
     int sum = 0;
     int temp = n;
@@ -19,3 +21,31 @@ bool isHappy(int n){
 // Status: Accepted
 // Runtime: 7 ms
 // Memory Usage: 5.6 MB
+
+
+// Solution 2:
+
+int getSumofSquareDigits(int n){
+    int sumofSquareNum = 0;
+    while(n){
+        sumofSquareNum += pow((n % 10),2);
+        n /= 10;
+    }
+    return sumofSquareNum;
+}
+bool isHappy(int n){
+    int currentNumberResult = n;
+    int nextNumberResult = n;
+    
+    do{
+        currentNumberResult = getSumofSquareDigits(currentNumberResult);
+        nextNumberResult = getSumofSquareDigits(getSumofSquareDigits(nextNumberResult));
+    }while(currentNumberResult != nextNumberResult);
+    
+    return (currentNumberResult ==1);
+}
+
+// 404 / 404 test cases passed.
+// Status: Accepted
+// Runtime: 6 ms
+// Memory Usage: 5.4 MB

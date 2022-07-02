@@ -2,7 +2,7 @@ int majorityElement(const int* A, int n1) {
     int count = 1;
     int index = 0;
     int i;
-    for(i = 0; i < n1; i++){
+    for(i = 1; i < n1; i++){
         if(A[index] == A[i]){
             count++;
         }
